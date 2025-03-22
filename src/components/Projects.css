@@ -1,0 +1,146 @@
+/* Background Styling */
+body {
+    background: linear-gradient(135deg, #002244, #0044aa);
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Project Title Outside Container */
+.projects-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Projects Container */
+.projects-container {
+    max-width: 90%;
+    max-height: 500px; /* Fixed height to enable scrolling */
+    margin: 40px auto;
+    padding: 20px;
+    padding-right: 5px;
+    text-align: center;
+    overflow-y: auto;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    position: relative;
+    scrollbar-gutter: stable both-edges;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Styling Inside Container */
+.projects-container::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    margin: 10px 6px 10px 0px;
+}
+
+/* Slide-in Effect */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating Effect */
+@keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Project Card Styling */
+.project-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-left: -12px;
+    opacity: 0;
+    animation: slideIn 0.8s ease-out forwards, floatEffect 4s ease-in-out infinite;
+}
+
+/* Project Title */
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* Project Description */
+.project-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Implementation Process */
+.project-implementation {
+    list-style: square;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Technologies List */
+.project-technologies {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.project-technologies li {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+        max-width: 95%;
+        height: 400px;
+    }
+
+    .project-card {
+        padding: 15px;
+        margin-left: -2px;
+    }
+
+    .project-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+    }
+}

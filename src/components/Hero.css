@@ -1,0 +1,95 @@
+/* Hero Section Container */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Makes it fit perfectly to screen height */
+    padding: 0 50px; /* Adjust padding as needed */
+    background: linear-gradient(135deg, #002244, #0044aa);
+    color: white;
+    overflow: hidden; /* Prevents unnecessary scrolling */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Description */
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+/* Individual Social Icon Styling */
+.social-icon {
+    font-size: 30px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #ffd700; /* Gold color on hover */
+}
+
+/* Profile Container (Circle Frame) */
+.profile-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+/* Profile Image - 3D Effect */
+.profile-pic {
+    width: 140%;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid rgb(204, 216, 232);
+    position: absolute;
+    bottom: -20px; /* Creates the 'coming out of frame' effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for 3D Look */
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Floating effect */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}

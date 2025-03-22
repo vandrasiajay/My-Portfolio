@@ -1,0 +1,124 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;700&display=swap');
+
+/* General container */
+.about-container {
+    min-height: 100vh; /* Ensures it covers the full viewport height */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background: linear-gradient(135deg, #002244, #0044aa); /* Smooth transition */
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Apply a modern font */
+}
+
+/* Left section: About Me */
+.about-content {
+    width: 55%;
+}
+
+/* Right section */
+.right-section {
+    width: 40%;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Stylish font */
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-decoration: underline;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-box {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+.skill-box svg {
+    font-size: 1.5rem;
+}
+
+.skill-box:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Resume Button */
+.resume-btn {
+    background: white;
+    width: 45%;
+    color: #0052d4;
+    justify-content: center;
+    margin-left: 200px;
+    font-size: 1.3rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resume-btn:hover {
+    background: #ddd;
+}
+
+/* Certifications & Hobbies */
+ul {
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Tech Illustration */
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    animation: floatAnimation 4s infinite ease-in-out;
+}
+
+/* Floating effect */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}

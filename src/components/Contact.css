@@ -1,0 +1,132 @@
+/* Ensure full height for body and fix background */
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #002244, #0044aa);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure main-content pushes down */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px; /* Prevent navbar overlap */
+    padding-bottom: 50px; /* Ensure space before the bottom */
+}
+
+/* Contact Container - Slide in & Float */
+.contact-container {
+    width: 95%;
+    max-width: 900px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    /* Slide-in effect on load */
+    animation: slideIn 1.5s ease-out forwards, floatUpDown 4s infinite alternate ease-in-out;
+    opacity: 0; /* Initially hidden for smooth effect */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Floating effect (after slide-in) */
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+}
+
+/* Contact Title */
+.contact-title {
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #002244;
+    margin-bottom: 15px;
+}
+
+/* Contact Information - Increased Font Size */
+.contact-container p {
+    font-size: 20px; /* Increased font size */
+    font-weight: 500;
+    color: #222;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Smooth Lift Effect on Hover */
+.contact-container p:hover {
+    transform: translateY(-3px);
+}
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Icon Styling */
+.btn .icon {
+    font-size: 1.5rem;
+}
+
+/* Individual button colors */
+.linkedin { background: #0077b5; }
+.instagram { background: #E4405F; }
+.github { background: #333; }
+.whatsapp { background: #25D366; }
+
+/* Hover Effect */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer Fix */
+.footer {
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+}
+
+/* Thank You Text - Bigger Side-to-Side Motion */
+.thank-you {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    animation: slideSideways 3s infinite alternate ease-in-out;
+}
+
+/* More Noticeable Side-to-Side Movement */
+@keyframes slideSideways {
+    0% { transform: translateX(-5px); }
+    100% { transform: translateX(10px); }
+}

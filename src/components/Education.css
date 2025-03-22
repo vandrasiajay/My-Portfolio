@@ -1,0 +1,132 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;700&display=swap');
+
+/* General container */
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px;
+    background: linear-gradient(to right, #0052d4, #4364f7, #094992);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* Left section (Fixed Width) */
+.education-content {
+  width: calc(52% + 10px);
+}
+
+/* Right Section (Adjusted to Fit) */
+.right-section {
+  width: calc(48% - 10px); /* Reduce width to balance */
+}
+
+/* Right Section (Optimized) */
+.right-section {
+    width: 48%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Internship & Training Sections */
+.right-section .internship, 
+.right-section .wipro-training {
+    width: 100%;
+    max-width: 470px;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    height: auto;
+}
+
+/* Ensuring Dynamic Height */
+.right-section .internship,
+.right-section .wipro-training {
+    min-height: auto;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold; /* Ensure bold */
+}
+
+/* Paragraph */
+p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Education Item */
+.education-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    font-weight: bold; /* Make titles bold */
+}
+
+.education-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Internship & Training Descriptions */
+.internship-description,
+.training-description {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-align: left;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
+/* Bold Titles in Right Section */
+.right-section .internship h3,
+.right-section .wipro-training h3 {
+    font-weight: bold; /* Ensure bold for titles */
+}
+
+/* View Buttons */
+.view-buttons {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.view-btn {
+    background: white;
+    color: #0052d4;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.view-btn:hover {
+    background: #ddd;
+}
