@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Education from "./components/Education";
-import Projects from "./components/Projects"; // Added Projects Page
-import "./App.css"; // Ensure smooth scrolling effect
+import Projects from "./components/Projects"; 
 import Contact from "./components/Contact";
+import "./App.css"; 
 
 const App = () => {
   return (
@@ -16,8 +16,8 @@ const App = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<AboutMe />} />
         <Route path="/education" element={<Education />} />
-        <Route path="/projects" element={<Projects />} /> {/* Added Projects Route */}
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
